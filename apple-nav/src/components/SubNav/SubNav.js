@@ -8,13 +8,13 @@ const SubNavContainer = styled.div`
     width: 100%;
     height: 92px;
     padding: 12px 0;
-    background-color: #F6F6F6;
+    background-color: ${props => props.dark ? '#141414' : '#F6F6F6'};
     div{
         display: flex;
         margin-top: 1px;
         a{
             text-decoration: none;
-            color: black;
+            color: ${props => props.dark ? 'white' : 'black'};
             &:hover{
             color: #0070c9;
             }
@@ -55,7 +55,7 @@ const Product = styled.div`
 const SubNav = props => {
     const productLine = props.match.params.productLine;
     return(
-        <SubNavContainer>
+        <SubNavContainer dark={productLine == 'iphone' || productLine == 'tv' ? true : false}>
             <div>
             {props.products[productLine].map(product => {
                 return(
