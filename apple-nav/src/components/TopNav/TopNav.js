@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const TopNavContainer = styled.nav`
     height: 44px;
     width: 100%;
-    background-color: rgba(45,45,45,0.98);
+    background-color: ${props => props.dark ? 'black' : 'rgba(45,45,45,0.98)'};
     .inner-nav-container{
         max-width:980px;
         height: 40px;
@@ -44,7 +44,7 @@ const TopNavContainer = styled.nav`
 
 const TopNav = props => {
     return(
-        <TopNavContainer>
+        <TopNavContainer dark={props.match.params.productLine === 'iphone'}>
             <div className="inner-nav-container">
                 <NavLink exact to="/"><i className="fab fa-apple" /></NavLink>
                 <NavLink to="/mac">Mac</NavLink>
