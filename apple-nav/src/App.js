@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 
 import TopNav from './components/TopNav/TopNav';
 import SubNav from './components/SubNav/SubNav';
+import data from './assets/products'
 import './App.css';
 
 class App extends Component {
@@ -16,7 +17,7 @@ class App extends Component {
       <TopNav />
       <Route 
         path="/:productLine" 
-        render={props => <SubNav {...props} />}
+        render={props => <SubNav {...props} products={data}/>}
       /> 
       </div>
     );

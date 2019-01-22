@@ -46,16 +46,16 @@ const TopNav = props => {
     return(
         <TopNavContainer>
             <div className="inner-nav-container">
-                <NavLink to="/"><i className="fab fa-apple" /></NavLink>
+                <NavLink exact to="/"><i className="fab fa-apple" /></NavLink>
                 <NavLink to="/mac">Mac</NavLink>
                 <NavLink to="/ipad">iPad</NavLink>
                 <NavLink to="/iphone">iPhone</NavLink>
                 <NavLink to="/watch">Watch</NavLink>
                 <NavLink to="/tv">TV</NavLink>
                 <NavLink to="/music">Music</NavLink>
-                <NavLink to="/support">Support</NavLink>
-                <NavLink to="/search"><i className="fas fa-search" /></NavLink>
-                <NavLink to="/cart"><i className="fas fa-shopping-basket" /></NavLink>
+                <NavLink exact to="/">Support</NavLink>
+                <NavLink exact to="/"><i className="fas fa-search" /></NavLink>
+                <NavLink exact to="/"><i className="fas fa-shopping-basket" /></NavLink>
             </div>
         </TopNavContainer>
     )
